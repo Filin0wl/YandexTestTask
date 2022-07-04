@@ -7,12 +7,13 @@
 
 import UIKit
 
+@IBDesignable
 class GameFieldView: UIView {
     
     // MARK: Variable
-    var shapeColor: UIColor = .blue
-    var shapePosition: CGPoint = .zero
-    var shapeSize: CGSize = CGSize(width: 40, height: 40)
+    @IBInspectable var shapeColor: UIColor = .blue
+    @IBInspectable var shapePosition: CGPoint = .zero
+    @IBInspectable var shapeSize: CGSize = CGSize(width: 40, height: 40)
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
@@ -23,9 +24,9 @@ class GameFieldView: UIView {
     
     private func getTrianglePath(in rect: CGRect) -> UIBezierPath {
         let path = UIBezierPath()
-        path.move(to: CGPoint(x: 0, y: 100))
-        path.addLine(to: CGPoint(x: 100, y: 100))
-        path.addLine(to: CGPoint(x: 50, y: 0))
+        path.move(to: CGPoint(x: rect.minX, y: rect.maxY))
+        path.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
+        path.addLine(to: CGPoint(x: rect.midX, y: rect.minY))
         path.close()
         path.stroke()
         path.fill()
