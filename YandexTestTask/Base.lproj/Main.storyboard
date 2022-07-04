@@ -83,6 +83,7 @@
                         <outlet property="gameFieldView" destination="NaU-hK-hce" id="NNZ-u3-DJD"/>
                         <outlet property="lastScoreLabel" destination="lhf-qx-3aP" id="pK0-he-HTM"/>
                         <outlet property="mainLabel" destination="BNe-sh-DfH" id="ccq-55-A9r"/>
+                        <outlet property="shapeView" destination="dYl-VK-zQd" id="eqh-kM-Aob"/>
                         <outlet property="shapeX" destination="Sze-dX-NXf" id="OhU-mm-yRh"/>
                         <outlet property="shapeY" destination="mrM-NW-bQa" id="cgm-Dh-J5T"/>
                         <outlet property="startStopButton" destination="ToZ-LF-Kx0" id="dJi-D7-oLb"/>

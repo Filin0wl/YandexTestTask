@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var startStopButton: UIButton!
     @IBOutlet weak var shapeX: NSLayoutConstraint!
     @IBOutlet weak var shapeY: NSLayoutConstraint!
+    @IBOutlet weak var shapeView: UIImageView!
     
 // MARK: Varialble
     var gameTimer: Timer = Timer()
@@ -28,7 +29,7 @@ class ViewController: UIViewController {
         }
     }
     let displayDuration: TimeInterval = 2
-    
+    var score = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,8 +89,8 @@ class ViewController: UIViewController {
     }
     
     @objc func moveImage() {
-        let maxX = gameFieldView.bounds.maxX
-        let maxY = gameFieldView.bounds.maxY
+        let maxX = gameFieldView.bounds.maxX - shapeView.frame.width
+        let maxY = gameFieldView.bounds.maxY - shapeView.frame.height
         shapeX.constant = CGFloat(arc4random_uniform(UInt32(maxX)))
         shapeY.constant = CGFloat(arc4random_uniform(UInt32(maxY)))
     }
