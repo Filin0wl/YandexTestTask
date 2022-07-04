@@ -11,13 +11,10 @@ class ViewController: UIViewController {
     
 // MARK: Outlets
     @IBOutlet weak var mainLabel: UILabel!
-    @IBOutlet weak var gameFieldView: UIView!
+    @IBOutlet weak var gameFieldView: GameFieldView!
     @IBOutlet weak var lastScoreLabel: UILabel!
     @IBOutlet weak var timeStepper: UIStepper!
     @IBOutlet weak var startStopButton: UIButton!
-    @IBOutlet weak var shapeX: NSLayoutConstraint!
-    @IBOutlet weak var shapeY: NSLayoutConstraint!
-    @IBOutlet weak var shapeView: UIImageView!
     
 // MARK: Variable
     var gameTimer: Timer = Timer()
