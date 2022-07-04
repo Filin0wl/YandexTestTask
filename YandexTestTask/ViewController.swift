@@ -68,24 +68,26 @@ class ViewController: UIViewController {
     }
     
     func startGame() {
-        shapeView.isHidden = false
-        moveImage()
-        timeStepper.isEnabled = false
         timerIsActive = true
+        gameFieldView.isShapeHidden = !timerIsActive
+        timeStepper.isEnabled = !timerIsActive
+        
+        moveImage()
         changedTimeLabel()
         setShapeTimer()
+        
         gameTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(tick), userInfo: nil, repeats: true)
         startStopButton.setTitle("Остановить", for: .normal)
     }
     
     
     func stopGame() {
+        timerIsActive = false
         gameTimer.invalidate()
         shapeTimer.invalidate()
-        shapeView.isHidden = true
-        timerIsActive = false
+        gameFieldView.isShapeHidden = !timerIsActive
+        timeStepper.isEnabled = !timerIsActive
         countOfTimer = 30
-        timeStepper.isEnabled = true
         startStopButton.setTitle("Начать", for: .normal)
         lastScoreLabel.text = "Последний счет: \(score)"
         score = 0
@@ -100,10 +102,7 @@ class ViewController: UIViewController {
     }
     
     @objc func moveImage() {
-        let maxX = gameFieldView.bounds.maxX - shapeView.frame.width
-        let maxY = gameFieldView.bounds.maxY - shapeView.frame.height
-        shapeX.constant = CGFloat(arc4random_uniform(UInt32(maxX)))
-        shapeY.constant = CGFloat(arc4random_uniform(UInt32(maxY)))
+       
     }
     
     func moveImageWithResetTimer() {
