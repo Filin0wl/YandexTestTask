@@ -10,15 +10,15 @@ import UIKit
 class GameFieldView: UIView {
     
     // MARK: Variable
-    var shapeColor: UIColor = .red
-    var shapePosotion: CGPoint = .zero
+    var shapeColor: UIColor = .blue
+    var shapePosition: CGPoint = .zero
     var shapeSize: CGSize = CGSize(width: 40, height: 40)
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         shapeColor.setFill() // заливка цветом
-        
-        
+        let path = getTrianglePath(in: CGRect(origin: shapePosition, size: shapeSize))
+        path.fill()
     }
     
     private func getTrianglePath(in rect: CGRect) -> UIBezierPath {
