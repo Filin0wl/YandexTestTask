@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12789810287326800007470A /* GameFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1278980F287326800007470A /* GameFieldView.swift */; };
 		12C5902A2861F4FC00C7A282 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C590292861F4FC00C7A282 /* AppDelegate.swift */; };
 		12C5902C2861F4FC00C7A282 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C5902B2861F4FC00C7A282 /* SceneDelegate.swift */; };
 		12C5902E2861F4FC00C7A282 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C5902D2861F4FC00C7A282 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1278980F287326800007470A /* GameFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFieldView.swift; sourceTree = "<group>"; };
 		12C590262861F4FC00C7A282 /* YandexTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YandexTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12C590292861F4FC00C7A282 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12C5902B2861F4FC00C7A282 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				12C590322861F4FF00C7A282 /* Assets.xcassets */,
 				12C590342861F4FF00C7A282 /* LaunchScreen.storyboard */,
 				12C590372861F4FF00C7A282 /* Info.plist */,
+				1278980F287326800007470A /* GameFieldView.swift */,
 			);
 			path = YandexTestTask;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				12C5902E2861F4FC00C7A282 /* ViewController.swift in Sources */,
 				12C5902A2861F4FC00C7A282 /* AppDelegate.swift in Sources */,
 				12C5902C2861F4FC00C7A282 /* SceneDelegate.swift in Sources */,
+				12789810287326800007470A /* GameFieldView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
