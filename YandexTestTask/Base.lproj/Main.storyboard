@@ -1,24 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="YandexTestTask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Время: 30 сек" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNe-sh-DfH">
+                                <rect key="frame" x="16" y="64" width="113" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="s76-oe-u4z">
+                                <rect key="frame" x="280" y="64" width="94" height="32"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="stepperChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="5fq-a8-4aX"/>
+                                </connections>
+                            </stepper>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ToZ-LF-Kx0">
+                                <rect key="frame" x="159" y="109" width="72" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Начать"/>
+                                <connections>
+                                    <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t4P-12-43d"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NaU-hK-hce">
+                                <rect key="frame" x="16" y="148" width="358" height="606"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1639251349_2-papik-pro-p-klipart-treugolnik-2" translatesAutoresizingMaskIntoConstraints="NO" id="dYl-VK-zQd">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="0ki-W8-HYc"/>
+                                            <constraint firstAttribute="height" constant="80" id="USq-6H-5Ay"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="dYl-VK-zQd" firstAttribute="leading" secondItem="NaU-hK-hce" secondAttribute="leading" id="Sze-dX-NXf"/>
+                                    <constraint firstItem="dYl-VK-zQd" firstAttribute="top" secondItem="NaU-hK-hce" secondAttribute="top" id="mrM-NW-bQa"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Последний счет: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhf-qx-3aP">
+                                <rect key="frame" x="121.00000000000001" y="803" width="148.33333333333337" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NaU-hK-hce" secondAttribute="trailing" constant="16" id="0Nq-30-O7O"/>
+                            <constraint firstAttribute="bottom" secondItem="lhf-qx-3aP" secondAttribute="bottom" constant="20" symbolic="YES" id="5Kr-W5-j8l"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NaU-hK-hce" secondAttribute="bottom" constant="56" id="6u8-3Y-DA5"/>
+                            <constraint firstItem="s76-oe-u4z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="CdW-IS-TVo"/>
+                            <constraint firstItem="BNe-sh-DfH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="KFz-oj-9XV"/>
+                            <constraint firstItem="ToZ-LF-Kx0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PYh-4a-7tc"/>
+                            <constraint firstItem="lhf-qx-3aP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Tzu-AW-UAg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="s76-oe-u4z" secondAttribute="trailing" constant="16" id="YWv-bg-HCU"/>
+                            <constraint firstItem="BNe-sh-DfH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="a49-hI-OoG"/>
+                            <constraint firstItem="ToZ-LF-Kx0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="65" id="bRf-K6-hyV"/>
+                            <constraint firstItem="NaU-hK-hce" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="gLX-Oh-IBt"/>
+                            <constraint firstItem="NaU-hK-hce" firstAttribute="top" secondItem="ToZ-LF-Kx0" secondAttribute="bottom" constant="8" symbolic="YES" id="la4-gS-5Lo"/>
+                            <constraint firstItem="s76-oe-u4z" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="BNe-sh-DfH" secondAttribute="trailing" constant="8" symbolic="YES" id="n6r-vP-cSn"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="gameFieldView" destination="NaU-hK-hce" id="NNZ-u3-DJD"/>
+                        <outlet property="lastScoreLabel" destination="lhf-qx-3aP" id="pK0-he-HTM"/>
+                        <outlet property="mainLabel" destination="BNe-sh-DfH" id="ccq-55-A9r"/>
+                        <outlet property="shapeX" destination="Sze-dX-NXf" id="OhU-mm-yRh"/>
+                        <outlet property="shapeY" destination="mrM-NW-bQa" id="cgm-Dh-J5T"/>
+                        <outlet property="startStopButton" destination="ToZ-LF-Kx0" id="dJi-D7-oLb"/>
+                        <outlet property="timeStepper" destination="s76-oe-u4z" id="e7K-ji-08i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="135.38461538461539" y="129.38388625592415"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="1639251349_2-papik-pro-p-klipart-treugolnik-2" width="600" height="538"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
