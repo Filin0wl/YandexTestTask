@@ -56,7 +56,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func shapeTapGestureRecognizer(_ sender: UITapGestureRecognizer) {
-        
+        score += 1
+        moveImageWithResetTimer()
     }
     
     //MARK: Methods
@@ -64,16 +65,17 @@ class ViewController: UIViewController {
     @objc func tick() {
         countOfTimer -= 1
         if countOfTimer == 0 {
-            gameTimer.invalidate()
+            stopGame()
         }
     }
     
     func startGame() {
+        moveImage()
         timeStepper.isEnabled = false
         timerIsActive = true
         changedTimeLabel()
+        setShapeTimer()
         gameTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(tick), userInfo: nil, repeats: true)
-        shapeTimer = Timer.scheduledTimer(timeInterval: displayDuration, target: self, selector: #selector(moveImage), userInfo: nil, repeats: true)
         startStopButton.setTitle("Остановить", for: .normal)
     }
     
@@ -85,7 +87,7 @@ class ViewController: UIViewController {
         countOfTimer = 30
         timeStepper.isEnabled = true
         startStopButton.setTitle("Начать", for: .normal)
-        lastScoreLabel.text = "Последний счет: 1"
+        lastScoreLabel.text = "Последний счет: \(score)"
     }
     
     func changedTimeLabel() {
@@ -103,4 +105,13 @@ class ViewController: UIViewController {
         shapeY.constant = CGFloat(arc4random_uniform(UInt32(maxY)))
     }
     
+    func moveImageWithResetTimer() {
+        shapeTimer.invalidate()
+        setShapeTimer()
+        shapeTimer.fire()
+    }
+    
+    func setShapeTimer() {
+        shapeTimer = Timer.scheduledTimer(timeInterval: displayDuration, target: self, selector: #selector(moveImage), userInfo: nil, repeats: true)
+    }
 }

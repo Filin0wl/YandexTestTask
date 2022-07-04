@@ -40,7 +40,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NaU-hK-hce">
                                 <rect key="frame" x="16" y="148" width="358" height="606"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1639251349_2-papik-pro-p-klipart-treugolnik-2" translatesAutoresizingMaskIntoConstraints="NO" id="dYl-VK-zQd">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1639251349_2-papik-pro-p-klipart-treugolnik-2" translatesAutoresizingMaskIntoConstraints="NO" id="dYl-VK-zQd">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                         <gestureRecognizers/>
                                         <constraints>
