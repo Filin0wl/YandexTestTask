@@ -102,7 +102,7 @@ class ViewController: UIViewController {
     }
     
     @objc func moveImage() {
-       
+        gameFieldView.randomizeShapePosition()
     }
     
     func moveImageWithResetTimer() {
