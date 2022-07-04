@@ -56,6 +56,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func shapeTapGestureRecognizer(_ sender: UITapGestureRecognizer) {
+        guard timerIsActive else { return }
         score += 1
         moveImageWithResetTimer()
     }
@@ -70,6 +71,7 @@ class ViewController: UIViewController {
     }
     
     func startGame() {
+        shapeView.isHidden = false
         moveImage()
         timeStepper.isEnabled = false
         timerIsActive = true
@@ -83,11 +85,13 @@ class ViewController: UIViewController {
     func stopGame() {
         gameTimer.invalidate()
         shapeTimer.invalidate()
+        shapeView.isHidden = true
         timerIsActive = false
         countOfTimer = 30
         timeStepper.isEnabled = true
         startStopButton.setTitle("Начать", for: .normal)
         lastScoreLabel.text = "Последний счет: \(score)"
+        score = 0
     }
     
     func changedTimeLabel() {
