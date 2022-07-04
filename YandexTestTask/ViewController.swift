@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var shapeY: NSLayoutConstraint!
     @IBOutlet weak var shapeView: UIImageView!
     
-// MARK: Varialble
+// MARK: Variable
     var gameTimer: Timer = Timer()
     var shapeTimer = Timer()
     var timerIsActive = false
@@ -39,6 +39,8 @@ class ViewController: UIViewController {
         gameFieldView.layer.borderWidth = CGFloat(1.0)
         gameFieldView.layer.cornerRadius = CGFloat(8.0)
     }
+    
+    //MARK: Actions
 
     @IBAction func stepperChanged(_ sender: UIStepper) {
         countOfTimer = Int(sender.value)
@@ -52,6 +54,12 @@ class ViewController: UIViewController {
         }
         
     }
+    
+    @IBAction func shapeTapGestureRecognizer(_ sender: UITapGestureRecognizer) {
+        
+    }
+    
+    //MARK: Methods
     
     @objc func tick() {
         countOfTimer -= 1

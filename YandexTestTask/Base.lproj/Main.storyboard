@@ -42,10 +42,14 @@
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1639251349_2-papik-pro-p-klipart-treugolnik-2" translatesAutoresizingMaskIntoConstraints="NO" id="dYl-VK-zQd">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="0ki-W8-HYc"/>
                                             <constraint firstAttribute="height" constant="80" id="USq-6H-5Ay"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="hgS-eY-ERH" appends="YES" id="gaM-dx-Cf5"/>
+                                        </connections>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -91,6 +95,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="hgS-eY-ERH">
+                    <connections>
+                        <action selector="shapeTapGestureRecognizer:" destination="BYZ-38-t0r" id="yZt-KV-TKX"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="135.38461538461539" y="129.38388625592415"/>
         </scene>
