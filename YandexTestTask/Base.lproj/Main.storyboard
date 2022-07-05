@@ -31,7 +31,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EDg-h0-TEh">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EDg-h0-TEh" customClass="GameControlView" customModule="YandexTestTask" customModuleProvider="target">
                                 <rect key="frame" x="16" y="0.0" width="382" height="96"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
