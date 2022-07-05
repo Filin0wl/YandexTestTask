@@ -11,10 +11,26 @@ import UIKit
 class GameFieldView: UIView {
     
     // MARK: Inspectable variable
-    @IBInspectable var shapeColor: UIColor = .blue
-    @IBInspectable var shapePosition: CGPoint = .zero
-    @IBInspectable var shapeSize: CGSize = CGSize(width: 40, height: 40)
-    @IBInspectable var isShapeHidden: Bool = false
+    @IBInspectable var shapeColor: UIColor = .blue {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
+    @IBInspectable var shapePosition: CGPoint = .zero {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
+    @IBInspectable var shapeSize: CGSize = CGSize(width: 40, height: 40) {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
+    @IBInspectable var isShapeHidden: Bool = false {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
     
     //MARK: Variable
     private var curPath: UIBezierPath?
@@ -29,7 +45,7 @@ class GameFieldView: UIView {
             return
         }
         shapeColor.setFill() // заливка цветом
-        let path = getTrianglePath(in: CGRect(origin: shapePosition, size: shapeSize))
+        let path = getRhombusPath(in: CGRect(origin: shapePosition, size: shapeSize))
         path.fill()
         curPath = path
     }
@@ -52,6 +68,18 @@ class GameFieldView: UIView {
         path.move(to: CGPoint(x: rect.minX, y: rect.maxY))
         path.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
         path.addLine(to: CGPoint(x: rect.midX, y: rect.minY))
+        path.close()
+        path.stroke()
+        path.fill()
+        return path
+    }
+    
+    private func getRhombusPath(in rect: CGRect) -> UIBezierPath {
+        let path = UIBezierPath()
+        path.move(to: CGPoint(x: rect.midX, y: rect.minY))
+        path.addLine(to: CGPoint(x: rect.minX, y: rect.midY))
+        path.addLine(to: CGPoint(x: rect.midX, y: rect.maxY))
+        path.addLine(to: CGPoint(x: rect.maxX, y: rect.midY))
         path.close()
         path.stroke()
         path.fill()

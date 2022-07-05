@@ -35,6 +35,8 @@ class ViewController: UIViewController {
         gameFieldView.layer.borderColor = UIColor.gray.cgColor
         gameFieldView.layer.borderWidth = CGFloat(1.0)
         gameFieldView.layer.cornerRadius = CGFloat(8.0)
+        gameFieldView.isShapeHidden = !timerIsActive
+        gameFieldView.shapeHitHandler = { [weak self] in self?.shapeTapGestureRecognizer()}
     }
     
     //MARK: Actions
@@ -52,7 +54,8 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func shapeTapGestureRecognizer(_ sender: UITapGestureRecognizer) {
+    
+    func shapeTapGestureRecognizer() {
         guard timerIsActive else { return }
         score += 1
         moveImageWithResetTimer()
