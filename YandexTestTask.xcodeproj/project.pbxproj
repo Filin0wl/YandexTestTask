@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		12789810287326800007470A /* GameFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1278980F287326800007470A /* GameFieldView.swift */; };
+		12789814287448DD0007470A /* GameControlView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12789813287448DD0007470A /* GameControlView.xib */; };
+		1278981628744A9D0007470A /* GameControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1278981528744A9D0007470A /* GameControlView.swift */; };
 		12C5902A2861F4FC00C7A282 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C590292861F4FC00C7A282 /* AppDelegate.swift */; };
 		12C5902C2861F4FC00C7A282 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C5902B2861F4FC00C7A282 /* SceneDelegate.swift */; };
 		12C5902E2861F4FC00C7A282 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C5902D2861F4FC00C7A282 /* ViewController.swift */; };
@@ -18,6 +20,8 @@
 
 /* Begin PBXFileReference section */
 		1278980F287326800007470A /* GameFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFieldView.swift; sourceTree = "<group>"; };
+		12789813287448DD0007470A /* GameControlView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameControlView.xib; sourceTree = "<group>"; };
+		1278981528744A9D0007470A /* GameControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameControlView.swift; sourceTree = "<group>"; };
 		12C590262861F4FC00C7A282 /* YandexTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YandexTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12C590292861F4FC00C7A282 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12C5902B2861F4FC00C7A282 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 				12C590342861F4FF00C7A282 /* LaunchScreen.storyboard */,
 				12C590372861F4FF00C7A282 /* Info.plist */,
 				1278980F287326800007470A /* GameFieldView.swift */,
+				12789813287448DD0007470A /* GameControlView.xib */,
+				1278981528744A9D0007470A /* GameControlView.swift */,
 			);
 			path = YandexTestTask;
 			sourceTree = "<group>";
@@ -130,6 +136,7 @@
 			files = (
 				12C590362861F4FF00C7A282 /* LaunchScreen.storyboard in Resources */,
 				12C590332861F4FF00C7A282 /* Assets.xcassets in Resources */,
+				12789814287448DD0007470A /* GameControlView.xib in Resources */,
 				12C590312861F4FC00C7A282 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,6 +151,7 @@
 				12C5902E2861F4FC00C7A282 /* ViewController.swift in Sources */,
 				12C5902A2861F4FC00C7A282 /* AppDelegate.swift in Sources */,
 				12C5902C2861F4FC00C7A282 /* SceneDelegate.swift in Sources */,
+				1278981628744A9D0007470A /* GameControlView.swift in Sources */,
 				12789810287326800007470A /* GameFieldView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

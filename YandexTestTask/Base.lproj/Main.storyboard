@@ -16,28 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Время: 30 сек" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNe-sh-DfH">
-                                <rect key="frame" x="16" y="20" width="113" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="s76-oe-u4z">
-                                <rect key="frame" x="304" y="20" width="94" height="32"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <action selector="stepperChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="5fq-a8-4aX"/>
-                                </connections>
-                            </stepper>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ToZ-LF-Kx0">
-                                <rect key="frame" x="171" y="65" width="72" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Начать"/>
-                                <connections>
-                                    <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t4P-12-43d"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NaU-hK-hce" customClass="GameFieldView" customModule="YandexTestTask" customModuleProvider="target">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NaU-hK-hce" customClass="GameFieldView" customModule="YandexTestTask" customModuleProvider="target">
                                 <rect key="frame" x="16" y="104" width="382" height="576"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <userDefinedRuntimeAttributes>
@@ -52,36 +31,33 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EDg-h0-TEh">
+                                <rect key="frame" x="16" y="0.0" width="382" height="96"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NaU-hK-hce" secondAttribute="trailing" constant="16" id="0Nq-30-O7O"/>
                             <constraint firstAttribute="bottom" secondItem="lhf-qx-3aP" secondAttribute="bottom" constant="20" symbolic="YES" id="5Kr-W5-j8l"/>
+                            <constraint firstItem="EDg-h0-TEh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="6e0-fh-LWt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NaU-hK-hce" secondAttribute="bottom" constant="56" id="6u8-3Y-DA5"/>
-                            <constraint firstItem="s76-oe-u4z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="CdW-IS-TVo"/>
-                            <constraint firstItem="BNe-sh-DfH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="KFz-oj-9XV"/>
-                            <constraint firstItem="ToZ-LF-Kx0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PYh-4a-7tc"/>
+                            <constraint firstItem="EDg-h0-TEh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GTH-E8-6wL"/>
                             <constraint firstItem="lhf-qx-3aP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Tzu-AW-UAg"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="s76-oe-u4z" secondAttribute="trailing" constant="16" id="YWv-bg-HCU"/>
-                            <constraint firstItem="BNe-sh-DfH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="a49-hI-OoG"/>
-                            <constraint firstItem="ToZ-LF-Kx0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="65" id="bRf-K6-hyV"/>
                             <constraint firstItem="NaU-hK-hce" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="gLX-Oh-IBt"/>
-                            <constraint firstItem="NaU-hK-hce" firstAttribute="top" secondItem="ToZ-LF-Kx0" secondAttribute="bottom" constant="8" symbolic="YES" id="la4-gS-5Lo"/>
-                            <constraint firstItem="s76-oe-u4z" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="BNe-sh-DfH" secondAttribute="trailing" constant="8" symbolic="YES" id="n6r-vP-cSn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EDg-h0-TEh" secondAttribute="trailing" constant="16" id="gZf-O1-IRG"/>
+                            <constraint firstItem="NaU-hK-hce" firstAttribute="top" secondItem="EDg-h0-TEh" secondAttribute="bottom" constant="8" id="skK-WQ-oUT"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="gameFieldView" destination="NaU-hK-hce" id="NNZ-u3-DJD"/>
                         <outlet property="lastScoreLabel" destination="lhf-qx-3aP" id="pK0-he-HTM"/>
-                        <outlet property="mainLabel" destination="BNe-sh-DfH" id="ccq-55-A9r"/>
-                        <outlet property="startStopButton" destination="ToZ-LF-Kx0" id="dJi-D7-oLb"/>
-                        <outlet property="timeStepper" destination="s76-oe-u4z" id="e7K-ji-08i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135.38461538461539" y="129.38388625592415"/>
+            <point key="canvasLocation" x="134.78260869565219" y="128.80434782608697"/>
         </scene>
     </scenes>
     <resources>
