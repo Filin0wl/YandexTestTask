@@ -8,10 +8,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameControlView" customModule="YandexTestTask" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameControlView" customModule="YandexTestTask" customModuleProvider="target">
+            <connections>
+                <outlet property="actionButton" destination="iSm-j4-ugz" id="7Ku-jw-rHV"/>
+                <outlet property="stepper" destination="afU-bH-uEV" id="lCS-6T-R05"/>
+                <outlet property="timeLabel" destination="mHj-Be-GNg" id="kge-Zk-WbF"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="402" height="138"/>
+            <rect key="frame" x="0.0" y="0.0" width="402" height="74"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Время: 30 сек" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHj-Be-GNg">
@@ -23,11 +29,17 @@
                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="afU-bH-uEV">
                     <rect key="frame" x="308" y="0.0" width="94" height="32"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <action selector="stepperChanged:" destination="-1" eventType="valueChanged" id="Oc5-eJ-rJZ"/>
+                    </connections>
                 </stepper>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSm-j4-ugz">
-                    <rect key="frame" x="165" y="107" width="72" height="31"/>
+                    <rect key="frame" x="165" y="43" width="72" height="31"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Начать"/>
+                    <connections>
+                        <action selector="actionButtonTapped:" destination="-1" eventType="touchUpInside" id="WEN-bc-uF4"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
@@ -42,7 +54,7 @@
                 <constraint firstItem="afU-bH-uEV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mHj-Be-GNg" secondAttribute="trailing" constant="8" symbolic="YES" id="yjy-fM-t8Q"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="128.98550724637681" y="334.82142857142856"/>
+            <point key="canvasLocation" x="128.98550724637681" y="313.39285714285711"/>
         </view>
     </objects>
     <resources>

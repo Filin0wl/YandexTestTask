@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,11 +13,15 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="YandexTestTask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NaU-hK-hce" customClass="GameFieldView" customModule="YandexTestTask" customModuleProvider="target">
-                                <rect key="frame" x="16" y="104" width="382" height="576"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EDg-h0-TEh" customClass="GameControlView" customModule="YandexTestTask" customModuleProvider="target">
+                                <rect key="frame" x="16" y="44" width="382" height="103"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NaU-hK-hce" customClass="GameFieldView" customModule="YandexTestTask" customModuleProvider="target">
+                                <rect key="frame" x="16" y="155" width="382" height="651"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="size" keyPath="shapeSize">
@@ -26,31 +30,32 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Последний счет: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhf-qx-3aP">
-                                <rect key="frame" x="133" y="695" width="148" height="21"/>
+                                <rect key="frame" x="133" y="826" width="148" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EDg-h0-TEh" customClass="GameControlView" customModule="YandexTestTask" customModuleProvider="target">
-                                <rect key="frame" x="16" y="0.0" width="382" height="96"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NaU-hK-hce" secondAttribute="trailing" constant="16" id="0Nq-30-O7O"/>
                             <constraint firstAttribute="bottom" secondItem="lhf-qx-3aP" secondAttribute="bottom" constant="20" symbolic="YES" id="5Kr-W5-j8l"/>
-                            <constraint firstItem="EDg-h0-TEh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="6e0-fh-LWt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NaU-hK-hce" secondAttribute="bottom" constant="56" id="6u8-3Y-DA5"/>
-                            <constraint firstItem="EDg-h0-TEh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GTH-E8-6wL"/>
+                            <constraint firstItem="EDg-h0-TEh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="BXE-eE-YZW"/>
+                            <constraint firstItem="EDg-h0-TEh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="CJ0-qY-XMx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NaU-hK-hce" secondAttribute="trailing" constant="16" id="DYo-2B-zLr"/>
+                            <constraint firstItem="NaU-hK-hce" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="155" id="F4S-BD-cFO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EDg-h0-TEh" secondAttribute="trailing" constant="16" id="M38-gF-Jzt"/>
+                            <constraint firstItem="NaU-hK-hce" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="M50-ie-X5F"/>
                             <constraint firstItem="lhf-qx-3aP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Tzu-AW-UAg"/>
+                            <constraint firstItem="lhf-qx-3aP" firstAttribute="top" secondItem="NaU-hK-hce" secondAttribute="bottom" constant="20" id="YeW-Dc-v5m"/>
+                            <constraint firstItem="NaU-hK-hce" firstAttribute="top" secondItem="EDg-h0-TEh" secondAttribute="bottom" constant="8" id="eNZ-Oo-J3s"/>
                             <constraint firstItem="NaU-hK-hce" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="gLX-Oh-IBt"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EDg-h0-TEh" secondAttribute="trailing" constant="16" id="gZf-O1-IRG"/>
-                            <constraint firstItem="NaU-hK-hce" firstAttribute="top" secondItem="EDg-h0-TEh" secondAttribute="bottom" constant="8" id="skK-WQ-oUT"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="gameControl" destination="EDg-h0-TEh" id="qaP-xT-Stf"/>
                         <outlet property="gameFieldView" destination="NaU-hK-hce" id="NNZ-u3-DJD"/>
                         <outlet property="lastScoreLabel" destination="lhf-qx-3aP" id="pK0-he-HTM"/>
                     </connections>
