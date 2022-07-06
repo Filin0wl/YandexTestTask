@@ -10,10 +10,10 @@ import UIKit
 @IBDesignable
 class GameControlView: UIView {
     
-    //MARK: Outlets
-    @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var stepper: UIStepper!
-    @IBOutlet weak var actionButton: UIButton!
+    //MARK: Constants
+    private let timeLabel: UILabel!
+    private let stepper: UIStepper!
+    private let actionButton: UIButton!
     
     //MARK: Inspectable variableis
     @IBInspectable var gameTimeLeft: Double = 7 {
@@ -51,7 +51,9 @@ class GameControlView: UIView {
     }
     
     private func setupVIews() {
-        
+        addSubview(timeLabel)
+        addSubview(stepper)
+        addSubview(actionButton)
     }
     
     private func updateTimeLabel() {
