@@ -10,10 +10,10 @@ import UIKit
 @IBDesignable
 class GameControlView: UIView {
     
-    //MARK: Constants
-    private let timeLabel: UILabel!
-    private let stepper: UIStepper!
-    private let actionButton: UIButton!
+    //MARK: Views
+    private let timeLabel = UILabel()
+    private let stepper = UIStepper()
+    private let actionButton = UIButton()
     
     //MARK: Inspectable variableis
     @IBInspectable var gameTimeLeft: Double = 7 {
