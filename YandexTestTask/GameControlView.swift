@@ -54,6 +54,10 @@ class GameControlView: UIView {
         addSubview(timeLabel)
         addSubview(stepper)
         addSubview(actionButton)
+        
+        timeLabel.translatesAutoresizingMaskIntoConstraints = true
+        stepper.translatesAutoresizingMaskIntoConstraints = true
+        actionButton.translatesAutoresizingMaskIntoConstraints = true
     }
     
     private func updateTimeLabel() {
@@ -74,12 +78,12 @@ class GameControlView: UIView {
         }
     }
     
-    //MARK: Actions
-    @IBAction func stepperChanged(_ sender: UIStepper) {
+    
+    func stepperChanged() {
         updateTimeLabel()
     }
     
-    @IBAction func actionButtonTapped(_ sender: UIButton) {
+    func actionButtonTapped() {
         startStopHandler?()
     }
     
