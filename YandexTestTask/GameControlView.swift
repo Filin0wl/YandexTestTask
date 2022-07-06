@@ -50,6 +50,11 @@ class GameControlView: UIView {
         setupVIews()
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+    }
+    
     private func setupVIews() {
         addSubview(timeLabel)
         addSubview(stepper)
