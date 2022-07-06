@@ -51,18 +51,8 @@ class GameControlView: UIView {
     }
     
     private func setupVIews() {
-        let xibView = loadViewFromXib()
-        xibView.frame = self.bounds
-        xibView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        self.addSubview(xibView)
+        
     }
-    
-    private func loadViewFromXib() -> UIView {
-        let bundle = Bundle(for: type(of: self))
-        let nib = UINib(nibName: "GameControlView", bundle: bundle)
-        return nib.instantiate(withOwner: self, options: nil).first! as! UIView
-    }
-    
     
     private func updateTimeLabel() {
         stepper.isEnabled = !isGameActive
