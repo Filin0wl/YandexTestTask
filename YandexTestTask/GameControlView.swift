@@ -15,6 +15,7 @@ class GameControlView: UIView {
     private let stepper = UIStepper()
     private let actionButton = UIButton()
     
+    
     //MARK: Inspectable variableis
     @IBInspectable var gameTimeLeft: Double = 7 {
         didSet {
@@ -23,8 +24,7 @@ class GameControlView: UIView {
     }
     @IBInspectable var isGameActive: Bool = false {
         didSet {
-            updateTimeLabel()
-            updateButtonLabel()
+            updateUI()
         }
     }
     @IBInspectable var gameDuration: Double {
@@ -40,6 +40,10 @@ class GameControlView: UIView {
     //MARK: Variables
     var startStopHandler: (() -> Void)?
     
+    //MARK: Constants
+    private let actionButtonTopMargin: CGFloat = 8
+    private let timeToStepperMargin: CGFloat = 8
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupVIews()
@@ -50,9 +54,26 @@ class GameControlView: UIView {
         setupVIews()
     }
     
+    override var intrinsicContentSize: CGSize {
+        let stepperSize = stepper.intrinsicContentSize
+        let timeLabelSize = timeLabel.intrinsicContentSize
+        let buttonSize = actionButton.intrinsicContentSize
+        
+        let width = timeLabelSize.width + timeToStepperMargin + stepperSize.width
+        let heigth = stepperSize.height + actionButtonTopMargin + buttonSize.height
+        return CGSize(width: width, height: heigth)
+    }
+    
     override func layoutSubviews() {
         super.layoutSubviews()
+        let stepperSize = stepper.intrinsicContentSize
+        stepper.frame = CGRect (origin: CGPoint(x: bounds.maxX - stepperSize.width, y: bounds.minY), size: stepperSize)
         
+        let timeLabelSize = timeLabel.intrinsicContentSize
+        timeLabel.frame = CGRect(origin: CGPoint(x: bounds.midX, y: bounds.minY + (stepperSize.height - timeLabelSize.height)/2), size: timeLabelSize)
+        
+        let buttonSize = actionButton.intrinsicContentSize
+        actionButton.frame = CGRect(origin: CGPoint(x: bounds.minX + (bounds.width - buttonSize.width) / 2, y: stepper.frame.maxY + actionButtonTopMargin), size: buttonSize)
     }
     
     private func setupVIews() {
@@ -66,6 +87,8 @@ class GameControlView: UIView {
         
         stepper.addTarget(self, action: #selector(stepperChanged), for: .valueChanged)
         actionButton.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)
+        
+        updateUI()
     }
     
     private func updateTimeLabel() {
@@ -86,6 +109,10 @@ class GameControlView: UIView {
         }
     }
     
+    private func updateUI() {
+        updateTimeLabel()
+        updateButtonLabel()
+    }
     
     @objc func stepperChanged() {
         updateTimeLabel()
