@@ -67,13 +67,31 @@ class GameControlView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         let stepperSize = stepper.intrinsicContentSize
-        stepper.frame = CGRect (origin: CGPoint(x: bounds.maxX - stepperSize.width, y: bounds.minY), size: stepperSize)
+        stepper.frame = CGRect(
+            origin: CGPoint(
+                x: bounds.maxX - stepperSize.width,
+                y: bounds.minY
+            ),
+            size: stepperSize
+        )
         
         let timeLabelSize = timeLabel.intrinsicContentSize
-        timeLabel.frame = CGRect(origin: CGPoint(x: bounds.midX, y: bounds.minY + (stepperSize.height - timeLabelSize.height)/2), size: timeLabelSize)
+        timeLabel.frame = CGRect(
+            origin: CGPoint(
+                x: bounds.minX,
+                y: bounds.minY + (stepperSize.height - timeLabelSize.height) / 2
+            ),
+            size: timeLabelSize
+        )
         
         let buttonSize = actionButton.intrinsicContentSize
-        actionButton.frame = CGRect(origin: CGPoint(x: bounds.minX + (bounds.width - buttonSize.width) / 2, y: stepper.frame.maxY + actionButtonTopMargin), size: buttonSize)
+        actionButton.frame = CGRect(
+            origin: CGPoint(
+                x: bounds.minX + (bounds.width - buttonSize.width) / 2,
+                y: stepper.frame.maxY + actionButtonTopMargin
+            ),
+            size: buttonSize
+        )
     }
     
     private func setupVIews() {
