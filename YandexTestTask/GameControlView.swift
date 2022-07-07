@@ -107,6 +107,8 @@ class GameControlView: UIView {
         actionButton.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)
         
         updateUI()
+        
+        actionButton.setTitleColor(actionButton.tintColor, for: .normal)
     }
     
     private func updateTimeLabel() {
