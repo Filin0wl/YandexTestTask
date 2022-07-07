@@ -119,6 +119,7 @@ class GameControlView: UIView {
         } else {
             timeLabel.text = "Время: \(Int(stepper.value)) сек"
         }
+        setNeedsLayout()
     }
     
     private func updateButtonLabel(){
@@ -127,6 +128,7 @@ class GameControlView: UIView {
         } else {
             actionButton.setTitle("Начать", for: .normal)
         }
+        setNeedsLayout()
     }
     
     private func updateUI() {
